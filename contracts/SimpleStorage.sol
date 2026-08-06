@@ -1,4 +1,4 @@
-</> solidity
+
 
 // SPDX-License-Identifier:MT
 
