@@ -1,0 +1,10 @@
+{
+  "contracts/SimpleStorage.sol": {
+    "__sources__": {
+      "contracts/SimpleStorage.sol": {
+        "content": "\r\n\r\n// SPDX-License-Identifier:MT\r\n\r\npragma solidity ^0.8.20;\r\n\r\ncontract SimpleStorage {\r\nuint256 storedNumber;\r\nfunction store(uint256 newNumber) public {\r\nstoredNumber = newNumber;\r\n}\r\n\r\nfunction retrieve() public view returns (uint256) {\r\nreturn storedNumber;\r\n}\r\n}",
+        "file": "contracts/SimpleStorage.sol"
+      }
+    }
+  }
+}
