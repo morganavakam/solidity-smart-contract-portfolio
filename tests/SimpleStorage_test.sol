@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
+import "remix_tests.sol";
 import "../contracts/SimpleStorage.sol";
 
 contract SimpleStorageTest {
@@ -12,8 +13,9 @@ contract SimpleStorageTest {
     }
 
     function checkInitialValue() public {
-        require(
-            simpleStorage.retrieve() == 0,
+        Assert.equal(
+            simpleStorage.retrieve(),
+            uint256(0),
             "Initial value should be 0"
         );
     }
@@ -21,8 +23,9 @@ contract SimpleStorageTest {
     function checkStoreAndRetrieve() public {
         simpleStorage.store(100);
 
-        require(
-            simpleStorage.retrieve() == 100,
+        Assert.equal(
+            simpleStorage.retrieve(),
+            uint256(100),
             "Stored value should be 100"
         );
     }
