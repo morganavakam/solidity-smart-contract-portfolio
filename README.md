@@ -35,25 +35,33 @@ The main Solidity contract is located at:
 
 ## Testing
 
-The contract was compiled and deployed using Remix IDE.
+Automated unit tests are included in `tests/SimpleStorage_test.sol`.
 
-A test value of `100` was stored using the `store()` function.
+The test suite verifies:
 
-The `retrieve()` function successfully returned:
+- The initial stored value is `0`
+- A new value can be stored using `store()`
+- The stored value can be retrieved correctly using `retrieve()`
 
-`100`
+The tests were executed using the Solidity Unit Testing plugin in Remix IDE.
 
-This confirms that the contract can successfully store and retrieve blockchain state.
+Test results:
+
+- Passed: 2
+- Failed: 0
+
+This confirms that the core contract functions behave as expected.
 
 ## Development Workflow
 
 1. Write the Solidity smart contract
-2. Compile the contract
+2. Compile the contract using Remix IDE
 3. Deploy the contract to Remix VM
-4. Execute the `store()` transaction
-5. Verify the stored value using `retrieve()`
-6. Commit the project using Git
-7. Push the project to GitHub
+4. Execute and verify contract transactions
+5. Write automated Solidity unit tests
+6. Run the test suite and verify all tests pass
+7. Manage source code using Git
+8. Push the project to GitHub
 
 ## Purpose
 
@@ -70,5 +78,8 @@ Future portfolio projects will build on these foundations and introduce more adv
 - Token contracts
 - Payment contracts
 - Security practices
-- Automated testing
 - Decentralized application integration
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
